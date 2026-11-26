@@ -1,0 +1,13 @@
+[build]
+  base = "frontend"
+  command = "npm run build -- --outDir dist"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22.22.0"
+
+# Keep client-side routes working on refresh.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
