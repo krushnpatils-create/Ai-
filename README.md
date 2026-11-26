@@ -127,6 +127,20 @@ See the [User Guide](https://open-jarvis.github.io/OpenJarvis/user-guide/morning
 
 Full documentation — including Docker deployment, cloud engines, development setup, and tutorials — at **[open-jarvis.github.io/OpenJarvis](https://open-jarvis.github.io/OpenJarvis/)**.
 
+## Netlify Frontend
+
+Netlify builds the upstream OpenJarvis web app in `frontend/` and publishes
+`frontend/dist/`. The web app is from OpenJarvis revision
+`dc9b57a3ac1ad88193d54e32b96e91ab6d01c877`; this checkout does not include
+the Python server or native desktop project.
+
+To use chat, open **Settings → Connection** in the deployed app and enter the
+**API URL** of a running OpenJarvis server. Use an HTTPS URL reachable from
+your browser and configure the server to allow the Netlify site's origin if
+it is hosted separately. If the server requires authentication, enter your
+own key in **API Key**. Never set a shared key in a `VITE_` variable: Vite
+embeds those values in the public frontend bundle when the app uses them.
+
 ## Community
 
 - **GitHub:** [github.com/open-jarvis/OpenJarvis](https://github.com/open-jarvis/OpenJarvis)
