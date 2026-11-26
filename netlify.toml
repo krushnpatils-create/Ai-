@@ -1,11 +1,11 @@
-
 [build]
-  base = "OpenJarvis-main/frontend"
-  command = "npm run build"
+  base = "frontend"
+  command = "npm run build -- --outDir dist"
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "22.22.0"
+  NODE_VERSION = "24"
+  NPM_VERSION = "11.19.0"
 
 [[redirects]]
   from = "/*"
